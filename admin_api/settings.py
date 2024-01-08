@@ -141,12 +141,12 @@ WSGI_APPLICATION = 'admin_api.wsgi.application'
 
 DATABASES = {
   'default': {
-    'ENGINE': "django.db.backends.mysql",
-    'NAME': config('DB_NAME'),
-    'HOST': config('DB_HOST'),
-    'PORT': config('DB_PORT'),
-    'USER': config('DB_USER'),
-    'PASSWORD': config('DB_PASSWORD'),
+    'ENGINE': config('DATABASE_ENGINE'),
+    'NAME': config('DATABASE_NAME'),
+    'HOST': config('DATABASE_HOST'),
+    'PORT': config('DATABASE_PORT'),
+    'USER': config('DATABASE_USER'),
+    'PASSWORD': config('DATABASE_PASSWORD'),
     # 'OPTIONS': {'ssl': {'ca': config('MYSQL_ATTR_SSL_CA')}, 'charset': 'utf8mb4'}
   }
 }
