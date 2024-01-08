@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('apps/admin/api/v1/smartnyumba', admin.site.urls),
+    path('apps/admin/api/v1/smartnyumba/', admin.site.urls),
     path('apps/admin/api/v1/auth/', include('authentication.api.urls')),
     path('apps/admin/api/v1/staff-accounts/', include('staff_accounts.api.urls')),
     path('apps/admin/api/v1/block-landlord/', include('block_landlord.api.urls')),

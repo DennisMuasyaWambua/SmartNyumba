@@ -45,18 +45,18 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'authentication.User'
 
-PASSWORD_HASHERS = [
-  'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-  'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-  'django.contrib.auth.hashers.Argon2PasswordHasher',
-  'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-  'django.contrib.auth.hashers.BCryptPasswordHasher',
-  'django.contrib.auth.hashers.SHA1PasswordHasher',
-  'django.contrib.auth.hashers.MD5PasswordHasher',
-  'django.contrib.auth.hashers.UnsaltedSHA1PasswordHasher',
-  'django.contrib.auth.hashers.UnsaltedMD5PasswordHasher',
-  'django.contrib.auth.hashers.CryptPasswordHasher',
-]
+# PASSWORD_HASHERS = [
+#   'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+#   'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+#   'django.contrib.auth.hashers.Argon2PasswordHasher',
+#   'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+#   'django.contrib.auth.hashers.BCryptPasswordHasher',
+#   'django.contrib.auth.hashers.SHA1PasswordHasher',
+#   'django.contrib.auth.hashers.MD5PasswordHasher',
+#   'django.contrib.auth.hashers.UnsaltedSHA1PasswordHasher',
+#   'django.contrib.auth.hashers.UnsaltedMD5PasswordHasher',
+#   'django.contrib.auth.hashers.CryptPasswordHasher',
+# ]
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
@@ -141,7 +141,7 @@ WSGI_APPLICATION = 'admin_api.wsgi.application'
 
 DATABASES = {
   'default': {
-    'ENGINE': config('DB_ENGINE'),
+    'ENGINE': "django.db.backends.mysql",
     'NAME': config('DB_NAME'),
     'HOST': config('DB_HOST'),
     'PORT': config('DB_PORT'),
