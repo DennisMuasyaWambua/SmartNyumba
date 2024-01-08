@@ -1,5 +1,5 @@
 from datetime import timedelta
-import os
+import os,dj_database_url
 from pathlib import Path
 from decouple import config, Csv
 from django.conf import settings
@@ -7,7 +7,7 @@ from django.conf import settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
+DATABASE_URL = config('DATABASE_URL')
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -140,15 +140,7 @@ WSGI_APPLICATION = 'admin_api.wsgi.application'
 # }
 
 DATABASES = {
-  'default': {
-    'ENGINE': config('DATABASE_ENGINE'),
-    'NAME': config('DATABASE_NAME'),
-    'HOST': config('DATABASE_HOST'),
-    'PORT': config('DATABASE_PORT'),
-    'USER': config('DATABASE_USER'),
-    'PASSWORD': config('DATABASE_PASSWORD'),
-    # 'OPTIONS': {'ssl': {'ca': config('MYSQL_ATTR_SSL_CA')}, 'charset': 'utf8mb4'}
-  }
+  'default': dj_database_url.config(default=DATABASE_URL, conn_max_age = 1800),
 }
 
 
