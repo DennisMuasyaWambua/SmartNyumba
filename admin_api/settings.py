@@ -7,7 +7,7 @@ from django.conf import settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = "postgresql://postgres:1e1G65A5gdAAE6DA-2efbG-*C23eA1-D@monorail.proxy.rlwy.net:16701/railway"
+DATABASE_URL = "postgresql://postgres:be-1eD56CG5a2-Af2F42*BbFBcF*bb1B@roundhouse.proxy.rlwy.net:32940/railway"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
@@ -45,18 +45,18 @@ INSTALLED_APPS = [
 
 AUTH_USER_MODEL = 'authentication.User'
 
-PASSWORD_HASHERS = [
-  'django.contrib.auth.hashers.PBKDF2PasswordHasher',
-  'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
-  'django.contrib.auth.hashers.Argon2PasswordHasher',
-  'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
-  'django.contrib.auth.hashers.BCryptPasswordHasher',
-  'django.contrib.auth.hashers.SHA1PasswordHasher',
-  'django.contrib.auth.hashers.MD5PasswordHasher',
-  'django.contrib.auth.hashers.UnsaltedSHA1PasswordHasher',
-  'django.contrib.auth.hashers.UnsaltedMD5PasswordHasher',
-  'django.contrib.auth.hashers.CryptPasswordHasher',
-]
+# PASSWORD_HASHERS = [
+#   'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+#   'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+#   'django.contrib.auth.hashers.Argon2PasswordHasher',
+#   'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+#   'django.contrib.auth.hashers.BCryptPasswordHasher',
+#   'django.contrib.auth.hashers.SHA1PasswordHasher',
+#   'django.contrib.auth.hashers.MD5PasswordHasher',
+#   'django.contrib.auth.hashers.UnsaltedSHA1PasswordHasher',
+#   'django.contrib.auth.hashers.UnsaltedMD5PasswordHasher',
+#   'django.contrib.auth.hashers.CryptPasswordHasher',
+# ]
 
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=60),
