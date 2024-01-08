@@ -7,7 +7,7 @@ from django.conf import settings
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-DATABASE_URL = "postgresql://postgres:E6c6EBd42AbEgcgcDeaff1B61F*bb2GB@viaduct.proxy.rlwy.net:34597/railway"
+DATABASE_URL = "postgresql://postgres:1e1G65A5gdAAE6DA-2efbG-*C23eA1-D@monorail.proxy.rlwy.net:16701/railway"
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
