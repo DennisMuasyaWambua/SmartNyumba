@@ -9,10 +9,6 @@ djangorestframework==3.14.0
 djangorestframework-simplejwt==5.3.1
 idna==3.6
 jmespath==1.0.1
-<<<<<<< HEAD
-mysqlclient==2.2.1
-=======
->>>>>>> local
 PyJWT==2.8.0
 python-dateutil==2.8.2
 python-decouple==3.8
