@@ -141,7 +141,7 @@ WSGI_APPLICATION = 'admin_api.wsgi.application'
 #check
 DATABASES = {
   'default': {
-    'ENGINE': "django.db.backends.mysql",
+    'ENGINE': "django.db.backends.postgresql",
     'NAME': config('DB_NAME'),
     'HOST': config('DB_HOST'),
     'PORT': config('DB_PORT'),
