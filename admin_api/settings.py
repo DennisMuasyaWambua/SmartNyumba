@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'properties.apps.PropertiesConfig',
     'rest_framework',
     'storages',
+    'corsheaders',
     'rest_framework_simplejwt.token_blacklist',
     'tenant_services.apps.TenantServicesConfig',
     'tenant_repairs.apps.TenantRepairsConfig',
@@ -87,7 +88,7 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
