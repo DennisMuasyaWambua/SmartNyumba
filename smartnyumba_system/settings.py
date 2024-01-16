@@ -94,7 +94,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
-    
+
 }
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -141,20 +141,20 @@ WSGI_APPLICATION = 'smartnyumba_system.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#   'default': {
-#     'ENGINE': config('DB_ENGINE'),
-#     'NAME': config('DB_NAME'),
-#     'HOST': config('DB_HOST'),
-#     'PORT': config('DB_PORT'),
-#     'USER': config('DB_USER'),
-#     'PASSWORD': config('DB_PASSWORD'),
-#     # 'OPTIONS': {'ssl': {'ca': config('MYSQL_ATTR_SSL_CA')}, 'charset': 'utf8mb4'}
-#   }
-# }
 DATABASES = {
-  'default': dj_database_url.config(default=DATABASE_URL, conn_max_age = 1800),
+  'default': {
+    'ENGINE': config('DB_ENGINE'),
+    'NAME': config('DB_NAME'),
+    'HOST': config('DB_HOST'),
+    'PORT': config('DB_PORT'),
+    'USER': config('DB_USER'),
+    'PASSWORD': config('DB_PASSWORD'),
+    # 'OPTIONS': {'ssl': {'ca': config('MYSQL_ATTR_SSL_CA')}, 'charset': 'utf8mb4'}
+  }
 }
+# DATABASES = {
+#   'default': dj_database_url.config(default=DATABASE_URL, conn_max_age = 1800),
+# }
 
 
 
@@ -226,8 +226,6 @@ BUSINESS_SHORT_CODE=config('BUSINESS_SHORT_CODE')
 STRIPE_SECRET_KEY=config('STRIPE_SECRET_KEY')
 SUCCESS_URL=config('SUCCESS_URL')
 CANCEL_URL=config('CANCEL_URL')
-
-
 AWS_ACCESS_KEY_ID = "AKIA5GEVZE6FH6MHYVKI"
 AWS_SECRET_ACCESS_KEY = "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"
 AWS_STORAGE_BUCKET_NAME = 'myzappa'
